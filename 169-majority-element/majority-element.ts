@@ -8,7 +8,8 @@ function majorityElement(nums: number[]): number {
         if (candidate === number) {
             counter++;
             continue;
-        }else      if (counter === 1) candidate = number
+        }
+        if (counter === 1) candidate = number
         else counter--;
 
     }
