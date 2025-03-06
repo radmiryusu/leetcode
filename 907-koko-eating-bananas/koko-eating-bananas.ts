@@ -12,11 +12,9 @@ function minEatingSpeed(piles: number[], h: number): number {
 
     while (left < right) {
         let mid = Math.floor((left + right) / 2);
-        if (canFinish(mid)) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
+        
+        if (canFinish(mid))right = mid 
+        else left = mid + 1;
     }
 
     return left;
