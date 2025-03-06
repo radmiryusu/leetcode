@@ -1,12 +1,9 @@
 function canConstruct(ransomNote: string, magazine: string): boolean {
-    if (ransomNote.length > magazine.length) return false;
+    for (let index = 0; index < ransomNote.length; index++) {
+        let start = magazine.length
+        magazine = magazine.replace(ransomNote[index], '')
 
-    const mag = magazine.split('')
-    for (const char of ransomNote) {
-        const i = mag.indexOf(char)
-        if (i === -1) return false
-        mag[i] = ''
+        if (start === magazine.length) return false
     }
-
     return true
 };
