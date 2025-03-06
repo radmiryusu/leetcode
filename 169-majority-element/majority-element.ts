@@ -5,12 +5,8 @@ function majorityElement(nums: number[]): number {
     for (let i = 1; i <= nums.length - 1; i++) {
         const number = nums[i];
 
-        if (candidate === number) {
-            counter++;
-            continue;
-        }
-
-        if (counter === 1) candidate = number
+        if (candidate === number) counter++
+        else if (counter === 1) candidate = number
         else counter--;
 
     }
